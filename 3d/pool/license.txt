@@ -1,0 +1,11 @@
+Model Information:
+* title:	Swimming Pool with texture
+* source:	https://sketchfab.com/3d-models/swimming-pool-with-texture-c388345dbb874937a1265f28b1017e85
+* author:	aymanalkady (https://sketchfab.com/aymanalkady)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Swimming Pool with texture" (https://sketchfab.com/3d-models/swimming-pool-with-texture-c388345dbb874937a1265f28b1017e85) by aymanalkady (https://sketchfab.com/aymanalkady) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

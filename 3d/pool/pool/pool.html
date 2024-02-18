@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pool</title>
+    <script src="./script/aframe.js"></script>
+    <script src="./script/ada-water.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="white"></a-sky>
+      <a-water
+        opacity="40"
+        side="double"
+        width="10"
+        height="10"
+        base-color="lightblue"
+        foam-color="blue"
+        repeat="2"
+        voronoi-points="10"
+        rotation="90 0 0"
+        position="0 0 0"
+      >
+      </a-water>
+    </a-scene>
+    <script>
+      document.querySelector("a-water").setAttribute("animation", {
+        property: "scale",
+        // from: "10 2 1",
+        // to: "2 15 2",
+        dur: 50,
+        loop: true,
+        dir: "alternate",
+        easing: "easeOutElastic",
+      });
+    </script>
+    
+</body>
+</html>

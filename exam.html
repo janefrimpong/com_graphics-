@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRACTICAL EXAM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="3d/aframe.min.js"></script>
+    <script src="3d/pool/pool/script/ada-water.js"></script>
+</head>
+<body>
+    <a-scene>
+        
+        <a-sky src="3d/2k_stars_milky_way.jpg"></a-sky>
+        <a-assets>
+            <a-asset-item id="house" src="3d/house/scene.gltf"></a-asset-item>
+            <a-asset-item id="car" src="3d/car/scene.gltf"></a-asset-item>
+            <a-asset-item  id="pool" src="3d/pool/scene.gltf" ></a-asset-item>
+            
+            <img id="pool" src="3d/floor-1024-2.jpg">
+               <img  src="3d/flo.jpg"  id="floor">
+               <img src="3d/floor-1024-2.jpg" id="fl">
+               <img src="3d/pexels-pixabay-268966 (1).jpg" id="wall">
+               
+               
+        </a-assets>
+        <a-plane position=" -12 -0.3 -80" rotation="-90 0 0" src="#floor"  repeat="3 3" scale ="200 160 200"></a-plane>
+       
+   
+        <a-entity gltf-model="#house" position="0 1 5" scale="3 3 3"></a-entity>
+        <a-entity gltf-model="#car" position="8  1 -55"  rotation="0 360  0 "   scale="3 3 3"></a-entity>
+        <!--roof-->
+        <a-box position=" -24 20.5  -73" rotation="-90 90 0" height="3.5" color="white" width="2"  depth="0.05" segments-tabular="6" scale ="21 21 20 "></a-box>
+
+        <!--tree-->
+        <a-box  position="0.5 2 -54" width="2" height="2" src="#fl" depth="3"></a-box>
+      
+
+       <!--tree-->
+        <a-box  position="-44 2 -58" width="2" height="2" src="#fl" depth="3"></a-box>
+    
+      
+        
+      <!--light1-->
+        <a-entity position="5 18.7 -54">
+            <a-light type="spot" color="#fff" angle="45" intensity="50" distance="50" penumbra="0.5" rotation="-71.86265849648838 -2.4482486585940073 -70.41422119039765" light="color: #56b8f5; angle: 70; intensity: 1.9; penumbra: 0.51; castShadow: true"></a-light>
+          </a-entity>
+         <!--pool-->
+         <a-entity gltf-model="#pool" position=" 44  -4  -110" scale="1 1 1 "></a-entity>
+
+       
+
+          <!--script-->
+
+
+          document.querySelector("a-water").setAttribute("animation", {
+            property: "scale",
+            // from: "10 2 1",
+            // to: "2 15 2",
+            dur: 50,
+            loop: true,
+            dir: "alternate",
+            easing: "easeOutElastic",
+          });
+        </script>
+    
+   
+    
+    <a-water
+            opacity="40"
+            side="double"
+            width="9"
+            height="20"
+            base-color="skyblue"
+            foam-color="blue"
+            repeat="2"
+            voronoi-points="10"
+            rotation="90 0 0"
+            position="44 0.1 -110"
+            scale="2.8 2.8 2.8"
+    
+          >
+          </a-water>
+         
+
+          <a-entity position="5 18.7 -54">
+            <a-entity light="type:point; intensity: 100.29; distance: 1.81; angle: 20; color: white; castShadow: true" position="0 -1.11834 0" angle="10"></a-entity>
+            <a-cylinder color="blue" position="0 0.2 0" width="1" height="1" radius="2" depth="0.7"></a-cylinder>
+          </a-entity>
+
+      <!--light2-->
+
+          <a-entity position="-44 18.7 -54">
+            <a-light type="spot" color="#fff" angle="45" intensity="50" distance="50" penumbra="0.5" rotation="-71.86265849648838 -2.4482486585940073 -70.41422119039765" light="color: #56b8f5; angle: 70; intensity: 1.9; penumbra: 0.51; castShadow: true"></a-light>
+          </a-entity>
+
+         
+
+          <a-entity position="-44 18.7 -54">
+            <a-entity light="type:point; intensity: 100.29; distance: 1.81; angle: 20; color: white; castShadow: true" position="0 -1.11834 0" angle="10"></a-entity>
+            <a-cylinder color="blue" position="0 0.2 0" width="1" height="1" radius="2" depth="0.7"></a-cylinder>
+          </a-entity>
+
+
+          <!--light3-->
+
+          <a-entity position="-44 18.7 -60">
+            <a-light type="spot" color="#fff" angle="45" intensity="50" distance="50" penumbra="0.5" rotation="-71.86265849648838 -2.4482486585940073 -70.41422119039765" light="color: #56b8f5; angle: 70; intensity: 1.9; penumbra: 0.51; castShadow: true"></a-light>
+          </a-entity>
+
+         
+
+          <a-entity position="-30  18.7 -67">
+            <a-entity light="type:point; intensity: 100.29; distance: 1.81; angle: 20; color: white; castShadow: true" position="0 -1.11834 0" angle="10"></a-entity>
+            <a-cylinder color="black" position="0 0.2 0"  radius="1" depth="2"></a-cylinder>
+          </a-entity>
+
+        <a-entity light="type:ambient;  intensity:0.5;" color="white"></a-entity>
+        <!--wall left-->
+        <a-box  position=" -112 4 -77" rotation="0 -90 0 "  src="#wall" height="1.5"  repeat="5" width="22" depth="0.1" scale ="8 8 8"></a-box>
+
+         <!--wall right-->
+         <a-box  position=" 88 4 -73" rotation="0 -90 0 "src="#wall"   height="1.5" width="22" repeat="5" depth="0.1" scale ="8 8 8 "></a-box>
+
+         <!--wall back-->
+         <a-box  position=" -11  4 -160" rotation="0 -180 0 "  repeat="5" src="#wall" height="1.5" width="25" depth="0.1" scale ="8 8 8 "></a-box>
+
+
+   
+          
+        <a-entity camera position="0 12 -19" look-controls wasd-controls></a-entity>
+        <a-entity light="type:ambient;  intensity:0;" color="white"></a-entity>
+    </a-scene>
+</body>
+</html>
